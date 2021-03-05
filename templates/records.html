@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+<h4>Data</h4>
+<table>
+    <th>ID</th>
+    <th>Header</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Body1</th>
+    <th>Body2</th>
+    <th>Body3</th>
+    <th>Body4</th>
+    <th>Body5</th>
+    <th>Image</th>
+    <th>Category</th>
+    <th>Video</th>
+
+    {% for data in data %}
+    <tr>
+        <td>{{ data[0] }}</td>
+        <td>{{ data[1] }}</td>
+        <td>{{ data[2] }}</td>
+        <td>{{ data[3] }}</td>
+        <td>{{ data[4] }}</td>
+        <td>{{ data[5] }}</td>
+        <td>{{ data[6] }}</td>
+        <td>{{ data[7] }}</td>
+
+        <td>{{ data[8] }}</td>
+        <td>{{ data[9] }}</td>
+        <td>{{ data[10] }}</td>
+        <td>{{ data[11] }}</td>
+
+        <td><a href = "/delete-data/{{data[0]}}">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+<h5><a href = "/blog-form/">Blog form</a></h5>
+<h5><a href = "/show-data/">show data</a></h5>
+
+
+
+</body>
+</html>
